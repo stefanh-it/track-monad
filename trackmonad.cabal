@@ -3,7 +3,7 @@ name:               trackmonad
 version:            0.1.0.0
 
 -- A short (one-line) description of the package.
--- synopsis:
+synopsis: a small cli application for tracking time spent on a project/client. 
 
 -- A longer description of the package.
 -- description:
@@ -12,10 +12,10 @@ version:            0.1.0.0
 -- bug-reports:
 
 -- The license under which the package is released.
--- license:
+-- license: "The GPLv3 License (GPLv3)"
 
 -- The package author(s).
--- author:
+-- author: stefanh-it(https://github.com/stefanh-it)
 
 -- An email address to which users can send suggestions, bug reports, and patches.
 -- maintainer:
@@ -29,10 +29,13 @@ executable trackmonad
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules:    TimeLogIO, CommonTypes, Config
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.15.1.0
+    build-depends:    base ^>=4.15.1.0, 
+                      containers,
+                      directory,
+                      time
     hs-source-dirs:   app
     default-language: Haskell2010
